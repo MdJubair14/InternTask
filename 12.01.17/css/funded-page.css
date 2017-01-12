@@ -1,0 +1,70 @@
+div {
+    margin-bottom: 3%;
+}
+
+h1, h3 {
+    color: deepskyblue;
+}
+
+.verticalLine {
+    border-left: 1px solid deepskyblue;
+}
+
+.box {
+    border: 1px solid;
+}
+.box h4{
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.box p{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-logos {
+    position: relative;
+    float: left;
+    width:  160px;
+    height: 160px;
+}
+
+.floating-box {
+    float: left;
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+    border: 1px solid gray;
+    text-align: center;
+    position: relative;
+}
+
+.floating-box a{
+    border: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*.floating-box img{
+    display: block;
+    margin: auto;
+    left: ;
+}*/
+.border-none{
+    border: none;
+}
+
+.vertical-middle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
