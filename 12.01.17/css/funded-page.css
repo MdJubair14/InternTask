@@ -1,23 +1,98 @@
-div {
-    margin-bottom: 3%;
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Altoys';
+    src: url('../css/fonts/Altoysjustpersonalonly-Italic.eot');
+    src: url('../css/fonts/Altoysjustpersonalonly-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../css/fonts/Altoysjustpersonalonly-Italic.woff') format('woff'),
+    url('../css/fonts/Altoysjustpersonalonly-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
 
 h1, h3 {
     color: deepskyblue;
 }
 
+.custom-container {
+    width: 70%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    border: 1px solid transparent;
+}
+
+.navbar-nav li{
+    float: left;
+    position: relative;
+    display: block;
+}
+
+.navbar-nav li a{
+    float: left;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.navbar-default {
+    background-color: #fcf8e3;
+}
+
+.navbar-right {
+    float: right !important;
+}
+
+.col-sm-6 {
+    width: 50%;
+    float: left;
+}
+
+.col-sm-4 {
+    width: 33.33%;
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+}
 .verticalLine {
     border-left: 1px solid deepskyblue;
 }
 
 .box {
-    border: 1px solid;
+    box-shadow: 6px 6px 6px 6px rgba(62, 10, 79, 0.26););
 }
 .box h4{
     text-align: center;
     padding-left: 1%;
     padding-right: 1%;
 }
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 .box p{
     padding-left: 2%;
@@ -28,6 +103,7 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
 }
 
 .portfolio-logos {
@@ -38,15 +114,39 @@ img{
 }
 
 .floating-box {
+    position: relative;
+    border-radius: 20px;
     float: left;
-    width: 180px;
-    height: 180px;
+    width: 16.5%;
+    height: 150px;
     margin: 20px;
     border: 1px solid gray;
     text-align: center;
-    position: relative;
 }
 
+/*.floating-box img:hover {
+    -webkit-animation-name: animatedLogo;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 2;
+    -webkit-animation-delay: 1s;
+
+    animation-name: animatedLogo;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes animatedLogo {
+    0%   {left:inherit; top:0px;}
+    50%  {left:inherit; top:50%;}
+    100% {left:inherit; bottom:0px;}
+}
+
+@keyframes animatedLogo {
+    0%   {left:inherit; top:0px;}
+    50%  {left:inherit; top:50%;}
+    100% {left:inherit; bottom:0px;}
+}*/
 .floating-box a{
     border: none;
     position: absolute;
@@ -54,11 +154,10 @@ img{
     right: 0;
 }
 
-/*.floating-box img{
-    display: block;
-    margin: auto;
-    left: ;
-}*/
+.logos {
+    float: inherit;
+}
+
 .border-none{
     border: none;
 }
@@ -66,5 +165,78 @@ img{
 .vertical-middle{
     position: absolute;
     top: 50%;
+    left: 8%;
     transform: translateY(-50%);
+}
+
+body{
+    font-family: Altoys, 'Titillium Web', sans-serif;
+}
+
+nav.navbar.navbar-default ul li a {
+    color: red;
+}
+
+nav.navbar.navbar-default ul li a:hover {
+    background-color: teal;
+}
+
+.highlighted-text{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+@-webkit-keyframes header {
+    from {background-color: inherit;}
+    to {background-color: cornflowerblue;}
+}
+
+@keyframes header {
+    from {background-color: inherit;}
+    to {background-color: cornflowerblue;}
+}
+
+.highlighted-text h1:hover {
+    background-color: inherit;
+    animation-name: header;
+    animation-duration: 2s;
+}
+
+.grad {
+    text-align: center;
+    background-color: #fcf8e3; /* For browsers that do not support gradients */
+}
+
+.grad:hover {
+    background: -webkit-linear-gradient(left, #fcf8e3 , #6ab3ff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #fcf8e3, #6ab3ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #fcf8e3, #6ab3ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #fcf8e3 , #6ab3ff); /* Standard syntax (must be last) */
+}
+
+.box img {
+   padding-top: 25px;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+.box img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+
+.box h4, p {
+    text-shadow: 2px 2px rgba(44, 36, 255, 0.22);
+}
+
+@media screen and (max-width: 767px) {
+    .floating-box {
+        height: 114px;
+    }
+}
+
+footer {
+    text-align: center;
 }
